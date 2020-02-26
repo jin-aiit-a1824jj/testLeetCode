@@ -70,7 +70,7 @@ void func(string str, vector<string> words, int counter, vector<string>& wordFil
 
 class Solution {
 public:
-
+    //https://leetcode.com/problems/substring-with-concatenation-of-all-words/discuss/13658/Easy-Two-Map-Solution-(C%2B%2BJava)
     vector<int> findSubstring(string s, vector<string>& words) {
         unordered_map<string, int> counts;
         for (string word : words)

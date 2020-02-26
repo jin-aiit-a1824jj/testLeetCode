@@ -34,17 +34,25 @@ public:
             return 0;
         }
 
-        if(abs(dividend) < abs(divisor)){
+        if(abs((long long)dividend) < abs((long long)divisor)){
             return 0;
         }
+
+        if( dividend == INT_MIN && divisor == -1){
+            return INT_MAX;
+        }
         
-        int first[] = { dividend}; 
+        if( dividend == INT_MIN && divisor == 1){
+            return INT_MIN;
+        }
+        
+        int first[] = { dividend }; 
   
-        int second[] = { divisor}; 
+        int second[] = { divisor }; 
   
         int results[1]; 
 
-        transform(first, first + 1, second, results, divides<int>());        
+        transform(first, first + 1, second, results, divides<long long>());        
 
         return results[0];
     }
